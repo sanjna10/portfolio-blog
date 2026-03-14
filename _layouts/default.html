@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+  </head>
+  <body>
+    <div class="container">
+      {% include nav.html %}
+      <main>
+        {{ content }}
+      </main>
+      <footer class="footer">
+        <p>© 2026 {{ site.title }}. Powered by Jekyll and GitHub Pages.</p>
+      </footer>
+    </div>
+  </body>
+</html>
